@@ -7,130 +7,51 @@
     <list default="true" id="240126ac-bead-4e0b-ab75-26d79a830237" name="Default Changelist" comment="添加log4j.properties文件">
       <change beforePath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-blog-logs/error/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/error/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/MyBlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/MyBlogApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/aspect/PrincipalAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/aspect/PrincipalAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/aspect/annotation/PermissionCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/aspect/annotation/PermissionCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/component/JavaScriptCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/component/JavaScriptCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/component/PhoneRandomBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/component/PhoneRandomBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/component/ScheduledTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/component/ScheduledTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/component/StringAndArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/component/StringAndArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/config/DruidDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/config/DruidDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/config/ErrorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/config/ErrorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/constant/CodeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/constant/CodeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/constant/OSSClientConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/constant/OSSClientConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/constant/RoleConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/constant/RoleConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/constant/SiteOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/constant/SiteOwner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/ArchivesControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/ArchivesControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/BackControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/BackControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/CategoriesControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/CategoriesControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/CommentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/CommentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/EditorControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/EditorControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/ErrorPageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/ErrorPageControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/FriendlyLinkControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/FriendlyLinkControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/GetPhoneCodeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/GetPhoneCodeControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/IndexControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/IndexControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/LeaveMessageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/LeaveMessageControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/LoginControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/LoginControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/MyStoryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/MyStoryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/RegisterControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/RegisterControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/RewardControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/RewardControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/ShowArticleControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/ShowArticleControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/SuperAdminControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/SuperAdminControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/TagsControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/TagsControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/TodayControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/TodayControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/controller/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/controller/UserControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/ArchiveMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/ArchiveMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/ArticleLikesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/ArticleLikesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/ArticleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/CommentLikesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/CommentLikesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/FeedBackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/FeedBackMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/FriendLinkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/FriendLinkMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/LeaveMessageLikesRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/LeaveMessageLikesRecordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/LeaveMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/LeaveMessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/PrivateWordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/PrivateWordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/RewardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/RewardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/TagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/TagMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/TodayMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/TodayMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/mapper/VisitorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/mapper/VisitorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Archive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/ArticleLikesRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/ArticleLikesRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/CommentLikesRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/CommentLikesRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/DailySpeech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/DailySpeech.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/FeedBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/FeedBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/FriendLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/FriendLink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/LeaveMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/LeaveMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/LeaveMessageLikesRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/LeaveMessageLikesRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/PrivateWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/PrivateWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Reward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Reward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/UserReadNews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/UserReadNews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/model/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/model/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/redis/HashRedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/redis/HashRedisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/redis/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/redis/StringRedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/redis/StringRedisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/ArchiveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/ArchiveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/ArticleLikesRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/ArticleLikesRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/CommentLikesRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/CommentLikesRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/FeedBackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/FeedBackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/FriendLinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/FriendLinkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/LeaveMessageLikesRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/LeaveMessageLikesRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/LeaveMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/LeaveMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/PrivateWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/PrivateWordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/RewardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/RewardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/TodayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/TodayService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/VisitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/VisitorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/ArchiveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/ArchiveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/ArticleLikesRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/ArticleLikesRecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/CommentLikesRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/CommentLikesRecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/FeedBackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/FeedBackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/FriendLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/FriendLinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/LeaveMessageLikesRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/LeaveMessageLikesRecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/LeaveMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/LeaveMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/PrivateWordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/PrivateWordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/RewardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/RewardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/TodayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/TodayServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/impl/VisitorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/impl/VisitorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/service/security/CustomUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/service/security/CustomUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/AliYunOSSClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/AliYunOSSClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/BuildArticleTabloidUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/BuildArticleTabloidUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/DataMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/DataMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/JsonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/JsonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/MD5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/ResultUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/ResultUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/TimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/TimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/utils/TransCodingUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lyr/utils/TransCodingUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhy/MyBlogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lyr/MyBlogApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhy/poolTest/DatasourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lyr/poolTest/DatasourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhy/service/RedisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lyr/service/RedisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhy/MyBlogApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhy/poolTest/DatasourceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhy/service/RedisTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mylove.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mylove.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reward.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/superadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/superadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/today.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/today.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/myheart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mylove.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mylove.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mystory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reward.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/superadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/superadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/today.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/today.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,19 +91,6 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyBlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="myblog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lyr.MyBlogApplication" />
@@ -211,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649777993552</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改包名">
+      <created>1649783475290</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649783475290</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="解决无法启动问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决无法启动问题" />
+    <MESSAGE value="修改包名" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改包名" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
