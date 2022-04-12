@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="240126ac-bead-4e0b-ab75-26d79a830237" name="Default Changelist" comment="添加log4j.properties文件">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-blog-logs/error/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/error/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ali.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ali.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/archives.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mylove.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mylove.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reward.html" afterDir="false" />
@@ -29,20 +29,17 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/today.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/today.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/aboutme.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/archives.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/myheart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mylove.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mylove.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mystory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reward.html" afterDir="false" />
@@ -111,6 +108,7 @@
       <workItem from="1649773987453" duration="369000" />
       <workItem from="1649774952054" duration="3038000" />
       <workItem from="1649778952236" duration="283000" />
+      <workItem from="1649783683766" duration="980000" />
     </task>
     <task id="LOCAL-00001" summary="解决无法启动问题">
       <created>1649777993552</created>
@@ -126,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649783475290</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改标题">
+      <created>1649783961536</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649783961536</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +140,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="解决无法启动问题" />
     <MESSAGE value="修改包名" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改包名" />
+    <MESSAGE value="修改标题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改标题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
