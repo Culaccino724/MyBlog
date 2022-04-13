@@ -102,15 +102,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转关于我页面
-     */
-    @GetMapping("/aboutme")
-    public String aboutme(HttpServletRequest request){
-        request.getSession().removeAttribute("lastUrl");
-        return "aboutme";
-    }
-
-    /**
      * 跳转更新页
      */
     @GetMapping("/update")
