@@ -8,47 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/debug/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-blog-logs/error/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-blog-logs/error/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/aboutme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ali.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ali.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/friendlylink.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/myheart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mystory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reward.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/superadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/superadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/tags.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/today.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/today.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/aboutme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/friendlylink.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/myheart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/myheart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mystory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mystory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reward.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reward.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/superadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/superadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/tags.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/today.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/today.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/show.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +42,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -108,7 +69,9 @@
       <workItem from="1649773987453" duration="369000" />
       <workItem from="1649774952054" duration="3038000" />
       <workItem from="1649778952236" duration="283000" />
-      <workItem from="1649783683766" duration="980000" />
+      <workItem from="1649783683766" duration="2205000" />
+      <workItem from="1649786081232" duration="764000" />
+      <workItem from="1649837026581" duration="1876000" />
     </task>
     <task id="LOCAL-00001" summary="解决无法启动问题">
       <created>1649777993552</created>
@@ -131,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649783961536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改头像">
+      <created>1649784819389</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649784819389</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改名字">
+      <created>1649784997671</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649784997672</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +118,9 @@
     <MESSAGE value="解决无法启动问题" />
     <MESSAGE value="修改包名" />
     <MESSAGE value="修改标题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改标题" />
+    <MESSAGE value="修改头像" />
+    <MESSAGE value="修改名字" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改名字" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
