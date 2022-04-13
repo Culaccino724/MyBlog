@@ -249,9 +249,4 @@ public class BackControl {
         return "today";
     }
 
-    @GetMapping("/reward")
-    public String reward(HttpServletRequest request){
-        request.getSession().removeAttribute("lastUrl");
-        return "reward";
-    }
 }
