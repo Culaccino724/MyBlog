@@ -102,15 +102,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转更新页
-     */
-    @GetMapping("/update")
-    public String update(HttpServletRequest request){
-        request.getSession().removeAttribute("lastUrl");
-        return "update";
-    }
-
-    /**
      * 跳转友链页
      */
     @GetMapping("/friendlylink")
