@@ -57,15 +57,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转我的故事页
-     */
-    @GetMapping("/mystory")
-    public String mystory(HttpServletRequest request){
-        request.getSession().removeAttribute("lastUrl");
-        return "mystory";
-    }
-
-    /**
      * 跳转登录页
      */
     @GetMapping("/login")
