@@ -41,22 +41,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转我的女孩页
-     */
-    @GetMapping("/mylove")
-    public String myLove(){
-        return "mylove";
-    }
-
-    /**
-     * 跳转我的藏心阁页
-     */
-    @GetMapping("/myheart")
-    public String myheart(){
-        return "myheart";
-    }
-
-    /**
      * 跳转登录页
      */
     @GetMapping("/login")

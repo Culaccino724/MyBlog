@@ -404,20 +404,9 @@ a.tag:hover{
 }
 
 /*我的故事、我的女孩*/
-.bg-myGirl-a{
-    text-decoration: none;
-    color: white;
-}
-.bg-myGirl a:hover{
-    text-decoration: none;
-    color: #0a0a0a;
-}
 .bg-myHeart a:hover{
     text-decoration: none;
     color: #0a0a0a;
-}
-.bg-myGirl{
-    background:repeating-linear-gradient(45deg, #ffbb33, #fb3 15px, #58a 0,#58a 30px);
 }
 .bg-myHeart{
     background:repeating-linear-gradient(45deg, #8275fd, #8275fd 15px, #fd940c 0, #fd940c 30px);
