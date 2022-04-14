@@ -403,14 +403,6 @@ a.tag:hover{
     margin-right: 10px;
 }
 
-/*我的故事、我的女孩*/
-.bg-myHeart a:hover{
-    text-decoration: none;
-    color: #0a0a0a;
-}
-.bg-myHeart{
-    background:repeating-linear-gradient(45deg, #8275fd, #8275fd 15px, #fd940c 0, #fd940c 30px);
-}
 /*background:#eee;*/
 /*background-image: linear-gradient(45deg,#bbb 25%,transparent 0),linear-gradient(45deg,transparent 75%,#bbb 0),linear-gradient(45deg,#bbb 25%,transparent 0),linear-gradient(45deg,transparent 75%,#bbb 0);*/
 /*background-size: 30px 30px;*/
