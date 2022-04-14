@@ -372,12 +372,6 @@
                 siteDefault.append('<li>' +
                     '<i class="am-icon-commenting-o site-default-icon"></i><span class="site-default-word">评论总数</span>：' + data['data']['commentNum'] + ' 条' +
                     '</li>');
-                siteDefault.append('<li>' +
-                    '<i class="am-icon-pencil-square site-default-icon"></i><span class="site-default-word">网站最后更新</span>：<span class="siteUpdateTime">' + siteLastUpdateTime + '</span>' +
-                    '</li>');
-                siteDefault.append('<li>' +
-                    '<i class="am-icon-calendar site-default-icon"></i><span class="site-default-word">网站运行天数</span>：<span class="siteRunningTime"> </span>' +
-                    '</li>');
                 siteInfo.append(siteDefault);
             }
         },
