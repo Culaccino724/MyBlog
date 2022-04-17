@@ -169,14 +169,10 @@
     });
 
     //模态框表单提交
-    var auth_code = $("#auth_code");
-    var auth_code_null = $("#auth_code_null");
     var new_password_null = $("#new_password_null");
     var check_password_null = $("#check_password_null");
-    var auth_code_error = $('#auth_code_error');
     change_password_btn.click(function () {
         var modal_phone_len = modal_phone.val().length;
-        var auth_code_len = auth_code.val().length;
         var new_password_len = new_password.val().length;
         var check_password_len = check_password.val().length;
         //点击确认修改时再次检测两次密码是否一致
@@ -193,18 +189,13 @@
             change_password_btn.addClass("password_right");
         }
 
-        if(modal_phone_len !== 0 && auth_code_len !== 0 && new_password_len !== 0 && check_password_len !== 0){
+        if(modal_phone_len !== 0 && new_password_len !== 0 && check_password_len !== 0){
             change_password_btn.removeClass("no_submit");
             change_password_btn.addClass("yes_submit");
         }
         else {
             if(modal_phone_len === 0){
                 modal_phone_null.show();
-                change_password_btn.removeClass("yes_submit");
-                change_password_btn.addClass("no_submit");
-            }
-            if(auth_code_len === 0){
-                auth_code_null.show();
                 change_password_btn.removeClass("yes_submit");
                 change_password_btn.addClass("no_submit");
             }
@@ -220,10 +211,6 @@
             }
         }
     });
-    auth_code.focus(function () {
-        auth_code_null.hide();
-        auth_code_error.hide();
-    });
     new_password.focus(function () {
         new_password_null.hide();
     });
@@ -234,7 +221,6 @@
 
     change_password_btn.click(function () {
         var modal_phone_value = modal_phone.val();
-        var modal_auth_code_value = auth_code.val();
         var modal_new_password_value = new_password.val();
         if(change_password_btn.hasClass("yes_submit") && change_password_btn.hasClass("password_right") && modal_phone.hasClass("phone_success")){
             $.ajax({
@@ -243,13 +229,10 @@
                 dataType:'json',
                 data:{
                     phone:modal_phone_value,
-                    authCode:modal_auth_code_value,
                     newPassword:modal_new_password_value
                 },
                 success:function (data) {
-                    if(data['status'] == 902){
-                        auth_code_error.show();
-                    }else if (data['status'] == 506){
+                    if (data['status'] == 506){
                         $('.phoneNotExitSpan').show();
                     }else if (data['status'] == 103){
                         alert(data['message'] + " 密码修改失败")
