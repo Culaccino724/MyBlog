@@ -7,7 +7,6 @@ $('.userList .clickLi').click(function () {
 
 $('.basicSetting').click(function () {
     $('#phone').val("");
-    $('#authCode').val("");
     $('#password').val("");
     $('#surePassword').val("");
 });
@@ -148,7 +147,6 @@ savePersonalDateBtn.click(function () {
 });
 
 var phone = $('#phone');
-var authCode = $('#authCode');
 var password = $('#password');
 var surePassword = $('#surePassword');
 
@@ -171,56 +169,6 @@ phone.focus(function () {
 var my_interval;
 my_interval = 60;
 var timeLeft = my_interval;
-//重新发送计时函数
-var timeCount = function() {
-    window.setTimeout(function() {
-        if(timeLeft > 0) {
-            timeLeft -= 1;
-            $('#authCodeBtn').html(timeLeft + "秒重新发送");
-            timeCount();
-        } else {
-            $('#authCodeBtn').html("重新发送");
-            timeLeft=60;
-            $("#authCodeBtn").attr('disabled',false);
-        }
-    }, 1000);
-};
-//发送短信验证码
-$('#authCodeBtn').click(function () {
-    $('.notice').css("display","none");
-    $('#authCodeBtn').attr('disabled',true);
-    var phoneLen = phone.val().length;
-    if(phoneLen == 0){
-        dangerNotice("手机号不能为空");
-        $('#authCodeBtn').attr('disabled',false);
-    } else {
-        if(phone.hasClass("right")){
-            $.ajax({
-                type:'post',
-                url:'/getCode',
-                dataType:'json',
-                data:{
-                    phone:$('#phone').val(),
-                    sign:"changePassword"
-                },
-                success:function (data) {
-                    if(parseInt(data['status']) == 0) {
-                        successNotice("短信验证码发送成功");
-                        timeCount();
-                    } else {
-                        dangerNotice("短信验证码发送异常")
-                    }
-                },
-                error:function () {
-                }
-            });
-        } else {
-            dangerNotice("手机号不正确");
-            $('#authCodeBtn').attr('disabled',false);
-        }
-    }
-
-});
 
 //修改密码
 $('#changePasswordBtn').click(function () {
@@ -229,8 +177,6 @@ $('#changePasswordBtn').click(function () {
         dangerNotice("手机号不能为空");
     } else if (phone.hasClass("wrong")){
         dangerNotice("手机号不正确");
-    } else if (authCode.val().length === 0){
-        dangerNotice("验证码不能为空");
     } else if (password.val().length === 0){
         dangerNotice("新密码不能为空");
     } else if (surePassword.val().length === 0){
@@ -245,13 +191,10 @@ $('#changePasswordBtn').click(function () {
                 dataType:'json',
                 data:{
                     phone:phone.val(),
-                    authCode:authCode.val(),
                     newPassword:password.val()
                 },
                 success:function (data) {
-                    if(data['status'] == 902){
-                        dangerNotice("验证码不正确")
-                    }else if (data['status'] == 506){
+                    if (data['status'] == 506){
                         dangerNotice("手机号不存在")
                     }else if (data['status'] == 103){
                         dangerNotice(data['message'] + " 密码修改失败")
