@@ -86,14 +86,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转阿狸表白页
-     */
-    @GetMapping("/ali")
-    public String ali(){
-        return "ali";
-    }
-
-    /**
      * 跳转到用户页
      */
     @GetMapping("/user")
