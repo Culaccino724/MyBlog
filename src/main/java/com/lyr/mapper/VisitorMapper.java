@@ -19,7 +19,10 @@ public interface VisitorMapper {
     @Select("select * from visitor where pageName=#{pageName}")
     Visitor getVisitorNumByPageName(@Param("pageName") String pageName);
 
-    @Select("select visitorNum from visitor where pageName='totalVisitor'")
+    @Select("<script> " +
+            "select " +
+            "ifnull((select visitorNum from visitor where pageName='totalVisitor'), 0)" +
+            "</script>")
     long getTotalVisitor();
 
     @Update("update visitor set visitorNum=#{visitorNum} where pageName=#{pageName}")
