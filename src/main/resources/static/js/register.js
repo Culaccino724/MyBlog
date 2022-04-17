@@ -3,7 +3,6 @@
     $(".icons").css("display","none");
     $(".input_warn").css("display","none");
     $('#phone').val("");
-    $('#auth_code').val("");
     $('#username').val("");
     $('#password').val("");
 
@@ -14,7 +13,6 @@
 
     var phone_warn = $("#phone_warn");
     var phone_warn1 = $("#phone_warn1");
-    var auth_code_warn = $("#auth_code_warn");
     var username_warn = $('#username_warn');
     var username_warn1 = $('#username_warn1');
 
@@ -107,33 +105,24 @@
     });
 
     //注册表单判断
-    var auth_code = $("#auth_code");
     var username = $("#username");
     var password = $("#password");
-    var auth_code_null = $("#auth_code_null");
     var username_null = $("#username_null");
     var password_null = $("#password_null");
     var gender_null = $("#gender_null");
-    var auth_code_error = $("#auth_code_error");
 
     registerFormBtn.click(function (){
         var phone_value = phone.val().length;
-        var auth_code_value = auth_code.val().length;
         var username_value = username.val().length;
         var password_value = password.val().length;
         var radio_input = $(".radio_input input");
-        if (phone_value !== 0 && auth_code_value !== 0 && username_value !== 0 && password_value !== 0 && (radio_input[0].checked || radio_input[1].checked)) {
+        if (phone_value !== 0 && username_value !== 0 && password_value !== 0 && (radio_input[0].checked || radio_input[1].checked)) {
             registerFormBtn.removeClass("no_submit");
             registerFormBtn.addClass("yes_submit");
         }
         else {
             if (phone_value === 0) {
                 phone_null.css("display","block");
-                registerFormBtn.removeClass("yes_submit");
-                registerFormBtn.addClass("no_submit");
-            }
-            if (auth_code_value === 0) {
-                auth_code_null.css("display","block");
                 registerFormBtn.removeClass("yes_submit");
                 registerFormBtn.addClass("no_submit");
             }
@@ -155,11 +144,6 @@
         }
     });
 
-    auth_code.focus(function () {
-       auth_code_null.css("display","none");
-       auth_code_error.css("display","none");
-       auth_code_warn.css("display","none");
-    });
     username.focus(function () {
         username_null.css("display","none");
     });
@@ -200,7 +184,6 @@
     // var registerForm = $("#registerForm");
     registerFormBtn.click(function () {
         var phone_value = $("#phone").val();
-        var auth_code_value = $("#auth_code").val();
         var username_value = $("#username").val();
         var password_value = $("#password").val();
         var gender = $(".radio_input input");
@@ -217,16 +200,12 @@
                 dataType: 'json',
                 data: {
                     "phone":phone_value,
-                    "authCode":auth_code_value,
                     "username":username_value,
                     "password":password_value,
                     "gender":gender_value
                 },
                 success: function (data) {
-                    if(data['status'] == 902){
-                        auth_code_warn.css("display","block");
-                        auth_code_error.css("display","block");
-                    } else if(data['status'] == 903){
+                    if(data['status'] == 903){
                         phone_warn.css("display","block");
                         phone_error.css("display","block");
                     } else if(data['status'] == 505){
