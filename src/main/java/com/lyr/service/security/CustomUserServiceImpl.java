@@ -37,6 +37,8 @@ public class CustomUserServiceImpl implements UserDetailsService{
             throw  new UsernameNotFoundException("用户不存在");
         }
 
+        user.setRoles(userMapper.getRoleNameByPhone(phone));
+
         TimeUtil timeUtil = new TimeUtil();
         String recentlyLanded = timeUtil.getFormatDateForSix();
         userService.updateRecentlyLanded(user.getUsername(), recentlyLanded);
