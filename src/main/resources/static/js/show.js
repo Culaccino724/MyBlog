@@ -37,23 +37,6 @@
         });
         var articleFooter = $('<div class="end-logo">' +
             '<i class="am-icon-btn am-success am-icon-lg">完</i>' +
-            '</div>' +
-            '<div class="show-weixin">' +
-            '<p><i class="weiXinQuoteLeft am-icon-quote-left "></i></p><br>' +
-            '<p class="show-weixin-pic">' +
-            '<img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/weixin.jpg">' +
-            '</p>' +
-            '<p class="show-weixin-pic">欢迎关注我的微信公众号：zhyocean1314</p>' +
-            '<p><i class="weiXinQuoteRight am-icon-quote-right "></i></p>' +
-            '</div>' +
-            '<div>' +
-            '<ul class="post-copyright">' +
-            '<li><strong>本文作者：</strong><span id="authorFooter">' + data.originalAuthor + '</span></li>' +
-            '<li><strong>原文链接：</strong><span id="urlFooter"><a href="' + data.articleUrl + '">' + data.articleUrl + '</a></span></li>' +
-            '<li><strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用<span id="copyRightFooter"><a href="https://creativecommons.org/licenses/by/3.0/cn/" target="_blank"> CC BY 3.0 CN协议</a></span>进行许可。转载请署名作者且注明文章出处。</li>' +
-            '</ul>' +
-            '</div>' +
-            '<div class="article-tags">' +
 
             '</div>' +
             '<hr>' +
