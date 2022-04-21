@@ -64,9 +64,6 @@ public class EditorControl {
             String username = principal.getName();
 
             String phone = userService.findPhoneByUsername(username);
-            if(!userService.isSuperAdmin(phone)){
-                return JsonResult.fail(CodeType.PUBLISH_ARTICLE_NO_PERMISSION).toJSON();
-            }
 
             //获得文章html代码并生成摘要
             BuildArticleTabloidUtil buildArticleTabloidUtil = new BuildArticleTabloidUtil();
@@ -125,7 +122,7 @@ public class EditorControl {
         try {
             String username = principal.getName();
             String phone = userService.findPhoneByUsername(username);
-            if(userService.isSuperAdmin(phone)){
+            if(userService.usernameIsExist(username)){
                 return JsonResult.success().toJSON();
             }
             return JsonResult.fail().toJSON();
