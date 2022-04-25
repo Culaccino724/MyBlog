@@ -40,38 +40,6 @@ public class UserControl {
     RedisService redisService;
 
     /**
-     * 上传头像
-     */
-    @PostMapping(value = "/uploadHead", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_USER")
-    public String uploadHead(HttpServletRequest request,
-                                 @AuthenticationPrincipal Principal principal){
-        try {
-            String username = principal.getName();
-            String img = request.getParameter("img");
-            //获得上传文件的后缀名
-            int index = img.indexOf(";base64,");
-            String strFileExtendName = "." + img.substring(11,index);
-            img = img.substring(index + 8);
-
-            FileUtil fileUtil = new FileUtil();
-            String filePath = this.getClass().getResource("/").getPath().substring(1) + "userImg/";
-            TimeUtil timeUtil = new TimeUtil();
-            File file = fileUtil.base64ToFile(filePath, img, timeUtil.getLongTime() + strFileExtendName);
-            String url = fileUtil.uploadFile(file, "user/avatar/" + username);
-            int userId = userService.findIdByUsername(username);
-            userService.updateAvatarImgUrlById(url, userId);
-
-            DataMap data = userService.getHeadPortraitUrl(userId);
-            return JsonResult.build(data).toJSON();
-
-        } catch (Exception e){
-            log.error("Upload head picture exception", e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
      * 获得个人资料
      */
     @PostMapping(value = "/getUserPersonalInfo", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

@@ -11,40 +11,6 @@ $('.basicSetting').click(function () {
     $('#surePassword').val("");
 });
 
-//更改头像
-function imgChange(e) {
-    var dom =$("input[id^='imgTest']")[0];
-    var reader = new FileReader();
-    reader.onload = (function (file) {
-        return function (e) {
-            $.ajax({
-                type:'POST',
-                url:'/uploadHead',
-                dataType:'json',
-                data:{
-                    img:this.result
-                },
-                success:function (data) {
-                    if(data['status'] == 101){
-                        $.get("/toLogin",function(data,status,xhr){
-                            window.location.replace("/login");
-                        });
-                    } else if(data['status'] == 103){
-                        dangerNotice(data['message'] + " 更改头像失败");
-                    } else {
-                        $('#headPortrait').attr("src",data['data']);
-                        successNotice("更改头像成功");
-                    }
-
-                },
-                error:function () {
-                }
-            });
-        };
-    })(e.target.files[0]);
-    reader.readAsDataURL(e.target.files[0]);
-}
-
 //获得个人信息
 function getUserPersonalInfo() {
     $.ajax({
