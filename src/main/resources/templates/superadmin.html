@@ -42,7 +42,6 @@
                     </ul>
                 </li>
                 <li class="superAdminClick friendLink"><a><span class="am-icon-users"></span> 友链管理</a></li>
-                <li class="superAdminClick rewardManagement"><a><span class="am-icon-plus-square"></span> 募捐管理</a></li>
                 <li class="superAdminClick userFeedback"><a><span class="am-icon-table"></span> 反馈</a></li>
                 <li class="superAdminClick privateWord" style="width: 100%"><a><span class="am-icon-pencil-square-o"></span> 悄悄话</a></li>
             </ul>
@@ -139,19 +138,6 @@
                         </ol>
                         <div class="friendLinkContent">
                             <!--填充友链信息-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="superFunction" id="rewardManagement">
-                <div class="subject">
-                    <div class="">
-                        <ol class="am-breadcrumb  am-breadcrumb-slash navigationBar">
-                            <li class="am-active am-icon-home"> 后台管理</li>
-                            <li class="am-active">募捐管理</li>
-                        </ol>
-                        <div class="rewardContent">
-                            <!--填充募捐信息-->
                         </div>
                     </div>
                 </div>
@@ -265,74 +251,6 @@
             </div>
         </div>
     </div>
-
-    <!--增加募捐记录模态框-->
-    <div class="am-modal am-modal-confirm" tabindex="-1" id="addReward">
-        <div class="am-modal-dialog">
-            <div class="am-modal-bd">
-                <form id="rewardFrom">
-                    <fieldset class="addRewardForm">
-                        <legend>增加募捐记录</legend>
-                        <div>
-                            <label for="fundRaiser">昵称</label>
-                            <input type="text" class="rewardFormContent" id="fundRaiser" placeholder="输入募捐人昵称">
-                        </div>
-                        <div>
-                            <label for="rewardMoney">募捐金额</label>
-                            <input type="number" min="0.00" max="1000.00" step="0.01" class="rewardFormContent" id="rewardMoney" placeholder="输入募捐金额">
-                        </div>
-                        <div>
-                            <label for="reward-date">募捐日期</label>
-                            <input class="formInput" type="text" id="reward-date" data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'days'}" placeholder="填写募捐日期"/>
-                        </div>
-                        <div>
-                            <label for="fundRaisingSources">募捐来源</label>
-                            <select id="fundRaisingSources" class="rewardFormContent">
-                                <option value="" selected>请选择</option>
-                                <option value="公众号赞赏">公众号赞赏</option>
-                                <option value="微信收款码">微信收款码</option>
-                                <option value="支付宝收款码">支付宝收款码</option>
-                                <option value="工资捐赠">工资捐赠</option>
-                            </select>
-                            <span class="am-form-caret"></span>
-                        </div>
-                        <div>
-                            <label for="fundraisingPlace">募捐去处</label>
-                            <input type="text" class="rewardFormContent" id="fundraisingPlace" placeholder="输入募捐去处">
-                        </div>
-
-                        <div>
-                            <label for="remarks">备注</label>
-                            <textarea class="rewardFormContent remarks" rows="1" id="remarks" placeholder="要不备注点啥"></textarea>
-                        </div>
-                        <div>
-                            <label for="file">募捐证书</label>
-                            <input type="file" name="file" id="file">
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="am-modal-footer">
-                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
-                <span class="sureAddRewardBtn am-modal-btn" data-am-modal-confirm>确定</span>
-            </div>
-        </div>
-    </div>
-
-    <!--删除募捐记录模态框-->
-    <div class="am-modal am-modal-confirm" tabindex="-1" id="deleteReward">
-        <div class="am-modal-dialog">
-            <div class="am-modal-hd">删除募捐记录</div>
-            <div class="am-modal-bd">
-                你确定要删除吗？删除了就无法恢复了呦!
-            </div>
-            <div class="am-modal-footer">
-                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
-                <span class="sureRewardDeleteBtn am-modal-btn" data-am-modal-confirm>确定</span>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--手机适配显示左侧按钮-->
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>

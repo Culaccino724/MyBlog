@@ -3,7 +3,6 @@ package com.lyr.controller;
 import com.lyr.aspect.annotation.PermissionCheck;
 import com.lyr.constant.CodeType;
 import com.lyr.model.FriendLink;
-import com.lyr.model.Reward;
 import com.lyr.redis.StringRedisServiceImpl;
 import com.lyr.service.*;
 import com.lyr.utils.*;
@@ -15,9 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,8 +47,6 @@ public class SuperAdminControl {
     FriendLinkService friendLinkService;
     @Autowired
     RedisService redisService;
-    @Autowired
-    private RewardService rewardService;
 
     /**
      * 获得所有悄悄话
@@ -303,61 +297,4 @@ public class SuperAdminControl {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
-    /**
-     * 增加募捐记录
-     */
-    @PostMapping(value = "/addReward", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String addReward(@RequestParam("file") MultipartFile file,
-                            HttpServletRequest request,
-                            Reward reward){
-
-        try {
-            //获得募捐时间
-            String rewardDate = request.getParameter("reward-date");
-
-            //上次募捐证书
-            FileUtil fileUtil = new FileUtil();
-            String filePath = this.getClass().getResource("/").getPath().substring(1) + "blogImg/";
-            String fileContentType = file.getContentType();
-            String fileExtension = fileContentType.substring(fileContentType.indexOf("/") + 1);
-            TimeUtil timeUtil = new TimeUtil();
-            String fileName = timeUtil.getLongTime() + "." + fileExtension;
-            String subCatalog = "rewardRecord/" + new TimeUtil().getFormatDateForThree();
-            String fileUrl = fileUtil.uploadFile(fileUtil.multipartFileToFile(file, filePath, fileName), subCatalog);
-
-            reward.setRewardDate(timeUtil.stringToDateThree(rewardDate));
-            //募捐去处处理
-            if(reward.getFundraisingPlace().indexOf("《") == 0 && reward.getFundraisingPlace().indexOf("》") == reward.getFundraisingPlace().length()-1){
-                reward.setFundraisingPlace(reward.getFundraisingPlace());
-            } else {
-                reward.setFundraisingPlace("《"+reward.getFundraisingPlace()+"》");
-            }
-            reward.setRewardUrl(fileUrl);
-            if(reward.getRemarks() == null || StringUtil.BLANK.equals(reward.getRemarks().trim())){
-                reward.setRemarks("无");
-            }
-
-            DataMap data = rewardService.save(reward);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Add reward [{}] exception", reward, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 删除募捐记录
-     */
-    @GetMapping(value = "/deleteReward", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public  String deleteReward(@RequestParam("id") int id){
-        try {
-            DataMap data = rewardService.deleteReward(id);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Delete reward [{}] exception", id, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
 }

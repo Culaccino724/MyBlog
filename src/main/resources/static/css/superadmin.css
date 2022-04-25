@@ -310,31 +310,3 @@
 .addFriendLink,.subFriendLink,.addReward{
     cursor: pointer;
 }
-/*募捐管理*/
-.table thead{
-    font-size: 16px;
-}
-.table th{
-    border: 1px solid #ddd!important;
-}
-.am-table-striped > tbody > tr:nth-child(2n+1) > td, .am-table-striped > tbody > tr:nth-child(2n+1) > th{
-    background-color: white;
-}
-.table tbody th{
-    font: inherit;
-}
-.is-me{
-    margin-left: 1px;
-    padding: .15em .425em;
-}
-.addRewardForm{
-    text-align: left;
-    margin-bottom: 0;
-}
-.addRewardForm label{
-    margin-bottom: 25px;
-    width: 70px;
-}
-#rewardUrl{
-    display: inline-block;
-}

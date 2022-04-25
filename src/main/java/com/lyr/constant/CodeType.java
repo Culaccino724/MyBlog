@@ -43,9 +43,6 @@ public enum CodeType {
     UPDATE_FRIEND_LINK_SUCCESS(603, "更新友链成功"),
     DELETE_FRIEND_LINK_SUCCESS(604, "删除友链成功"),
 
-    ADD_REWARD_SUCCESS(701, "增加募捐记录成功"),
-    DELETE_REWARD_SUCCESS(702, "删除募捐记录成功"),
-
     COMMENT_BLANK(801, "内容为空"),
     MESSAGE_HAS_THUMBS_UP(802, "已经点过赞了"),
 
