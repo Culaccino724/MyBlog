@@ -9,12 +9,10 @@ import com.lyr.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,8 +25,6 @@ import java.util.Map;
 @Slf4j
 public class SuperAdminControl {
 
-    @Autowired
-    PrivateWordService privateWordService;
     @Autowired
     FeedBackService feedBackService;
     @Autowired

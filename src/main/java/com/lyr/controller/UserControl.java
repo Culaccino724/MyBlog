@@ -37,8 +37,6 @@ public class UserControl {
     @Autowired
     LeaveMessageService leaveMessageService;
     @Autowired
-    PrivateWordService privateWordService;
-    @Autowired
     RedisService redisService;
 
     /**
