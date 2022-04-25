@@ -49,42 +49,6 @@ public class SuperAdminControl {
     RedisService redisService;
 
     /**
-     * 获得所有悄悄话
-     * @return
-     */
-    @PostMapping(value = "/getAllPrivateWord", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String getAllPrivateWord(){
-        try {
-            DataMap data = privateWordService.getAllPrivateWord();
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Get all private word exception", e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 回复悄悄话
-     * @return
-     */
-    @PostMapping(value = "/replyPrivateWord", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String replyPrivateWord(@AuthenticationPrincipal Principal principal,
-                                       @RequestParam("replyContent") String replyContent,
-                                       @RequestParam("replyId") String id){
-        String username = principal.getName();
-        try {
-            DataMap data = privateWordService.replyPrivateWord(replyContent, username, Integer.parseInt(id));
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("[{}] Reply [{}] private word [{}] exception", username, id, replyContent, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-
-    }
-
-    /**
      * 分页获得所有反馈信息
      * @param rows 一页大小
      * @param pageNum 当前页

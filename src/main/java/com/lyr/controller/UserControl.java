@@ -143,44 +143,6 @@ public class UserControl {
     }
 
     /**
-     * 发布悄悄话
-     * @param privateWord 悄悄话内容
-     */
-    @PostMapping(value = "/sendPrivateWord", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_USER")
-    public String sendPrivateWord(@RequestParam("privateWord") String privateWord,
-                                      @AuthenticationPrincipal Principal principal){
-        String username = principal.getName();
-        try {
-            DataMap data = privateWordService.publishPrivateWord(privateWord, username);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("[{}] send private Word exception", username, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 获得悄悄话
-     * @param rows 一页大小
-     * @param pageNum 当前页
-     */
-    @PostMapping(value = "/getPrivateWordByPublisher", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_USER")
-    public String getPrivateWordByPublisher(@RequestParam("rows") int rows,
-                                                @RequestParam("pageNum") int pageNum,
-                                                @AuthenticationPrincipal Principal principal){
-        String username = principal.getName();
-        try {
-            DataMap data = privateWordService.getPrivateWordByPublisher(username, rows, pageNum);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("[{}] get private word exception", username, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
      * 已读一条消息
      * @param id 消息的id
      * @param msgType 消息是评论消息还是留言消息  1-评论  2--留言

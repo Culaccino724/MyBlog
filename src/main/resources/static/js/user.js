@@ -471,53 +471,6 @@ function putInLeaveWordInfo(data) {
 
     })
 }
-//填充悄悄话内容
-function putInPrivateWord(data) {
-    var yesterdayContent = $('.yesterdayContent');
-    yesterdayContent.empty();
-    if(data['result'].length == 0){
-        yesterdayContent.append($('<div class="noYesterday">' +
-            '你的曾今我好像未曾参与耶' +
-            '</div>'));
-    } else {
-        var says = $('<div class="says"></div>');
-        $.each(data['result'], function (index, obj) {
-            var say = $('<div class="say"></div>');
-            var youSay = $('<div class="youSay"></div>');
-            youSay.append($('<div class="youSayTime">' +
-                obj['publisherDate'] +
-                '</div>'));
-            youSay.append($('<div class="you">' +
-                '<span>' + obj['publisher'] + '</span>：' + obj['privateWord'] +
-                '</div>'));
-            if(obj['replyContent'] !== ""){
-                youSay.append($('<div class="me">' +
-                    obj['replyContent'] + '：' + obj['replier'] +
-                    '</div>'));
-            } else {
-                youSay.append($('<div class="me">' +
-                    '<span class="noReply">暂未收到回复</span>' +
-                    '</div>'));
-            }
-            say.append(youSay);
-            says.append(say);
-        });
-        says.append($('<div class="my-row" id="page-father">' +
-            '<div id="privateWordPagination">' +
-            '<ul class="am-pagination  am-pagination-centered">' +
-            '<li class="am-disabled"><a href="#">&laquo; 上一页</a></li>' +
-            '<li class="am-active"><a href="#">1</a></li>' +
-            '<li><a href="#">2</a></li>' +
-            '<li><a href="#">3</a></li>' +
-            '<li><a href="#">4</a></li>' +
-            '<li><a href="#">5</a></li>' +
-            '<li><a href="#">下一页 &raquo;</a></li>' +
-            '</ul>' +
-            '</div>' +
-            '</div>'));
-        yesterdayContent.append(says);
-    }
-}
 
 //获得评论
 function getUserComment(currentPage) {
@@ -595,43 +548,6 @@ function getUserLeaveWord(currentPage) {
         }
     })
 }
-//获得悄悄话内容
-function getPrivateWordByPublisher(currentPage) {
-    $.ajax({
-        type:'post',
-        url:'/getPrivateWordByPublisher',
-        dataType:'json',
-        data:{
-            rows:"5",
-            pageNum:currentPage
-        },
-        success:function (data) {
-            if(data['status'] == 101){
-                $.get("/toLogin",function(data,status,xhr){
-                    window.location.replace("/login");
-                });
-            } else if(data['status'] == 103){
-                dangerNotice(data['message'] + " 获得悄悄话失败");
-            } else {
-                putInPrivateWord(data['data']);
-
-                //分页
-                $("#privateWordPagination").paging({
-                    rows:data['data']['pageInfo']['pageSize'],//每页显示条数
-                    pageNum:data['data']['pageInfo']['pageNum'],//当前所在页码
-                    pages:data['data']['pageInfo']['pages'],//总页数
-                    total:data['data']['pageInfo']['total'],//总记录数
-                    callback:function(currentPage){
-                        getPrivateWordByPublisher(currentPage);
-                    }
-                });
-            }
-        },
-        error:function () {
-            alert("获取悄悄话失败");
-        }
-    })
-}
 
 // 点击评论管理
 $('.commentMessage').click(function () {
@@ -642,43 +558,6 @@ $('.leaveWord').click(function () {
     getUserLeaveWord(1);
 });
 
-//发布悄悄话
-$('.userSayBtn').click(function () {
-    var userSay = $('#userSay').val();
-    userSay = $.trim(userSay);
-    if(userSay == ""){
-        dangerNotice("你还没说两句呢");
-    } else {
-        $.ajax({
-            type:'post',
-            url:'/sendPrivateWord',
-            dataType:'json',
-            data:{
-                privateWord:userSay
-            },
-            success:function (data) {
-                if(data['status'] == 101){
-                    $.get("/toLogin",function(data,status,xhr){
-                        window.location.replace("/login");
-                    });
-                } else if(data['status'] == 103){
-                    dangerNotice(data['message'] + " 发表悄悄话失败");
-                } else {
-                    successNotice("发布悄悄话成功");
-                    $('#userSay').val("");
-                    getPrivateWordByPublisher(1);
-                }
-            },
-            error:function () {
-                alert("发布悄悄话失败");
-            }
-        })
-    }
-});
-//点击悄悄话
-$('.privateWord').click(function () {
-    getPrivateWordByPublisher(1);
-});
 
 getUserPersonalInfo();
 

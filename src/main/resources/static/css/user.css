@@ -225,62 +225,6 @@
 #authCode{
     width: 110px;
 }
-/*悄悄话*/
-.word{
-    display: block;
-    line-height: 25px;
-    font-size: 15px;
-    font-family: 幼圆;
-}
-#userSay{
-    height: 100px;
-    width: 100%;
-    padding: 5px 10px;
-    font-size: 15px;
-    border: 1px solid #c8c8c8;
-    border-radius: 4px;
-    background-color: hsla(0,0%,71%,.1);
-}
-.userSayBtn{
-    float: right;
-}
-.yesterday{
-    margin-top: 70px;
-    margin-bottom: 150px;
-}
-.noYesterday{
-    height: 30px;
-    background: #f0f0f0;
-    text-align: center;
-    opacity: .5;
-    line-height: 30px;
-    margin-bottom: 150px;
-}
-.say{
-    background-color: hsla(0,0%,71%,.1);
-    padding: 3px 10px 0;
-    margin-bottom: 5px;
-}
-.youSayTime{
-    text-align: center;
-    font-family: 隶书;
-    font-size: 15px;
-    color: #cc2808;
-    margin-bottom: 10px;
-}
-.you{
-    text-align: left;
-    font-size: 13px;
-    color: #3068b6;
-}
-.me{
-    text-align: right;
-    font-size: 13px;
-    color: #90b610;
-}
-.noReply{
-    color: red;
-}
 /*评论留言*/
 .leaveMessageTitle{
     padding: 10px 110px 10px 0!important;
