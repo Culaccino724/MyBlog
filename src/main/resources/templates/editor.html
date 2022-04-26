@@ -3,7 +3,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
-    <title>写文章 | LYR博客系统</title>
+    <title>写博客 | LYR博客系统</title>
 
     <link rel="icon" type="image/x-icon" href="/img/avatar.jpg">
     <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
@@ -66,7 +66,7 @@
         <div id="writeArticle">
             <div class="zhy-editor">
                 <div class="zhy-editor-input">
-                    <input id="zhy-editor-title" type="text" placeholder="输入文章标题">
+                    <input id="zhy-editor-title" type="text" placeholder="输入博客标题">
                     <button type="button" class="publishBtn am-btn am-btn-danger">发布博客</button>
                 </div>
             </div>
@@ -82,11 +82,11 @@
 
             <div class="notice-box notice-box-title">
                 <i class="am-icon-exclamation-circle"></i>
-                <span> 文章标题不能为空</span>
+                <span> 博客标题不能为空</span>
             </div>
             <div class="notice-box notice-box-content">
                 <i class="am-icon-exclamation-circle"></i>
-                <span> 文章內容不能为空</span>
+                <span> 博客內容不能为空</span>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
                     <div class="article-tag row">
                         <div class="tags">
                             <div class="tag-inline">
-                                <label class="publish-tag">文章标签<strong>:</strong></label>
+                                <label class="publish-tag">博客标签<strong>:</strong></label>
                                 <div class="tag">
 
                                 </div>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="article-type row">
-                        <label class="publish-tag">文章类型<strong>:</strong></label>
+                        <label class="publish-tag">博客类型<strong>:</strong></label>
                         <div class="type">
                             <select id="select-type">
                                 <option value="choose" selected>请选择</option>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="article-tag row">
-                        <label class="publish-tag">文章等级<strong>:</strong></label>
+                        <label class="publish-tag">博客等级<strong>:</strong></label>
                         <div class="grade">
                             <select id="select-grade">
                                 <option value="choose" selected>请选择</option>
@@ -148,9 +148,9 @@
                         </div>
 
                         <div id="originalAuthorHide" style="display: inline-block">
-                            <label class="publish-tag" style="margin-left: 10px;display: inline-block">文章作者<strong>:</strong></label>
+                            <label class="publish-tag" style="margin-left: 10px;display: inline-block">博客作者<strong>:</strong></label>
                             <div class="originalAuthor" style="display: inline-block">
-                                <input type="text" id="originalAuthor" placeholder="请输入文章原作者">
+                                <input type="text" id="originalAuthor" placeholder="请输入博客原作者">
                                 <span class="required">*</span>
                             </div>
                         </div>
@@ -173,11 +173,11 @@
         </div>
         <div class="notice-box notice-box-tags">
             <i class="am-icon-exclamation-circle"></i>
-            <span> 文章标签不能为空</span>
+            <span> 博客标签不能为空</span>
         </div>
         <div class="notice-box notice-box-type">
             <i class="am-icon-exclamation-circle"></i>
-            <span> 文章类型不能为空</span>
+            <span> 博客类型不能为空</span>
         </div>
         <div class="notice-box notice-box-categories">
             <i class="am-icon-exclamation-circle"></i>
@@ -185,7 +185,7 @@
         </div>
         <div class="notice-box notice-box-grade">
             <i class="am-icon-exclamation-circle"></i>
-            <span> 文章等级不能为空</span>
+            <span> 博客等级不能为空</span>
         </div>
         <div class="notice-box notice-box-originalAuthor">
             <i class="am-icon-exclamation-circle"></i>
