@@ -70,7 +70,7 @@
         }
         var likeBtn = $('<div class="likeBtn am-btn am-btn-danger">' +
             '<div class="likeHeart">' +
-            '<i class="am-icon-heart-o">&nbsp;&nbsp;喜欢</i>' +
+            '<i class="am-icon-heart-o">&nbsp;&nbsp;收藏</i>' +
             '</div>' +
             '<div class="likesNum">' +
             '<span> ' + data.likes + '</span>' +
