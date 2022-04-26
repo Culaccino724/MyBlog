@@ -22,9 +22,6 @@
             $.each(data['result'], function (index,obj) {
                 var visitorComment = $('<div class="visitorComment" id="p' + obj['id'] +  '"></div>');
                 var amG = $('<div class="am-g" style="margin: 0"></div>');
-                amG.append('<div class="visitorCommentImg am-u-sm-2 am-u-lg-1">' +
-                    '<img src="' + obj['avatarImgUrl'] + '">' +
-                    '</div>');
                 var amUSm10 = $('<div class="am-u-sm-10 am-u-lg-11"></div>');
                 amUSm10.append('<div class="visitorInfo">' +
                     '<span class="visitorFloor">#' + (data['result'].length-index) + '楼</span>' +
