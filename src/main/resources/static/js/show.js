@@ -173,9 +173,6 @@
                     '</div>'));
 
                 var amG = $('<div class="am-g"></div>');
-                amG.append($('<div class="visitorCommentImg am-u-sm-2 am-u-lg-1">' +
-                    '<img src="' + obj['avatarImgUrl'] + '">' +
-                    '</div>'));
                 var amUSm10 = $('<div class="am-u-sm-10 am-u-lg-11"></div>');
                 var visitorInfo = $('<div class="visitorInfo">' +
                     '<span class="visitorFloor">#' + (data.length-index) + '楼</span>' +
