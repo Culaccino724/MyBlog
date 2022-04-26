@@ -38,11 +38,6 @@ public enum CodeType {
     USERNAME_NOT_EXIST(506, "用户名不存在"),
     USERNAME_FORMAT_ERROR(507, "用户名长度过长或格式不正确"),
 
-    ADD_FRIEND_LINK_SUCCESS(601, "添加友链成功"),
-    FRIEND_LINK_EXIST(602, "友链已存在"),
-    UPDATE_FRIEND_LINK_SUCCESS(603, "更新友链成功"),
-    DELETE_FRIEND_LINK_SUCCESS(604, "删除友链成功"),
-
     COMMENT_BLANK(801, "内容为空"),
     MESSAGE_HAS_THUMBS_UP(802, "已经点过赞了"),
 

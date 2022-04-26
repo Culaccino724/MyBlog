@@ -2,7 +2,6 @@ package com.lyr.controller;
 
 import com.lyr.aspect.annotation.PermissionCheck;
 import com.lyr.constant.CodeType;
-import com.lyr.model.FriendLink;
 import com.lyr.redis.StringRedisServiceImpl;
 import com.lyr.service.*;
 import com.lyr.utils.*;
@@ -39,8 +38,6 @@ public class SuperAdminControl {
     StringRedisServiceImpl stringRedisService;
     @Autowired
     CategoryService categoryService;
-    @Autowired
-    FriendLinkService friendLinkService;
     @Autowired
     RedisService redisService;
 
@@ -200,59 +197,6 @@ public class SuperAdminControl {
             return JsonResult.build(data).toJSON();
         } catch (Exception e){
             log.error("Update type [{}] article categories [{}] exception", type, categoryName, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 获得友链
-     */
-    @PostMapping(value = "/getFriendLink", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String getFriendLink(){
-        try {
-            DataMap data = friendLinkService.getAllFriendLink();
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Get friendLink exception", e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 添加或编辑友链
-     */
-    @PostMapping(value = "/updateFriendLink", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String addFriendLink(@RequestParam("id") String id,
-                                @RequestParam("blogger") String blogger,
-                                @RequestParam("url") String url){
-        try {
-            FriendLink friendLink = new FriendLink(blogger, url);
-            DataMap data;
-            if(StringUtil.BLANK.equals(id)){
-                data = friendLinkService.addFriendLink(friendLink);
-            } else {
-                data = friendLinkService.updateFriendLink(friendLink, Integer.parseInt(id));
-            }
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Update friendLink [{}] exception", blogger, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 删除友链
-     */
-    @PostMapping(value = "/deleteFriendLink", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String deleteFriendLink(@RequestParam("id") int id){
-        try {
-            DataMap data = friendLinkService.deleteFriendLink(id);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Delete friendLink [{}] exception", id, e);
         }
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }

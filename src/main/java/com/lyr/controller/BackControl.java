@@ -77,15 +77,6 @@ public class BackControl {
     }
 
     /**
-     * 跳转友链页
-     */
-    @GetMapping("/friendlylink")
-    public String friendlylink(HttpServletRequest request){
-        request.getSession().removeAttribute("lastUrl");
-        return "friendlylink";
-    }
-
-    /**
      * 跳转到用户页
      */
     @GetMapping("/user")
