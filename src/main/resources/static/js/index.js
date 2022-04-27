@@ -83,7 +83,7 @@
         }
     };
 
-    //填充文章
+    //填充博客
     function putInArticle(data) {
     $('.articles').empty();
     var articles = $('.articles');
@@ -201,7 +201,7 @@
         tagCloud.append(widgetTagCloud);
     }
 
-    //首页文章分页请求
+    //首页博客分页请求
     function ajaxFirst(currentPage) {
     //加载时请求
     $.ajax({
@@ -214,7 +214,7 @@
         },
         success: function (data) {
             if(data['status'] == 103){
-                dangerNotice(data['message'] + " 获得文章信息失败");
+                dangerNotice(data['message'] + " 获得博客信息失败");
             } else {
                 //放入数据
                 putInArticle(data['data']);
@@ -234,7 +234,7 @@
             }
         },
         error: function () {
-            alert("获得文章信息失败！");
+            alert("获得博客信息失败！");
         }
     });
 }
@@ -361,7 +361,7 @@
                     '</h5>');
                 var siteDefault = $('<ul class="site-default"></ul>');
                 siteDefault.append('<li>' +
-                    '<i class="am-icon-file site-default-icon"></i><span class="site-default-word">文章总数</span>：' + data['data']['articleNum'] + ' 篇' +
+                    '<i class="am-icon-file site-default-icon"></i><span class="site-default-word">博客总数</span>：' + data['data']['articleNum'] + ' 篇' +
                     '</li>');
                 siteDefault.append('<li>' +
                     '<i class="am-icon-tags site-default-icon"></i><span class="site-default-word">标签总数</span>：' + data['data']['tagsNum'] + ' 个' +
