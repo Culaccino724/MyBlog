@@ -54,14 +54,14 @@ function putInAllFeedback(data) {
     }
 
 }
-//填充文章管理
+//填充博客管理
 function putInArticleManagement(data) {
     var articleManagementTable = $('.articleManagementTable');
     articleManagementTable.empty();
     var table = $('<table class="table am-table am-table-bd am-table-striped admin-content-table  am-animation-slide-right"></table>');
     table.append($('<thead>' +
         '<tr>' +
-        '<th>文章标题</th><th>发布时间</th><th>文章分类</th><th>浏览量</th><th>操作</th>' +
+        '<th>博客标题</th><th>发布时间</th><th>博客分类</th><th>浏览量</th><th>操作</th>' +
         '</tr>' +
         '</thead>'));
     var tables = $('<tbody class="tables"></tbody>');
@@ -95,108 +95,7 @@ function putInArticleManagement(data) {
         $('#deleteAlter').modal('open');
     })
 }
-//填充点赞信息
-function putInArticleThumbsUp(data) {
-    var msgContent = $('.msgContent');
-    msgContent.empty();
-    if(data['result'].length == 0){
-        msgContent.append($('<div class="noNews">' +
-            '这里空空如也' +
-            '</div>'));
-    } else {
-        msgContent.append($('<div class="msgReadTop">' +
-            '未读消息：<span class="msgIsReadNum">' + data['msgIsNotReadNum'] + '</span>'+
-            '<a class="msgIsRead">全部标记为已读</a>' +
-            '</div>'));
-        $.each(data['result'], function (index, obj) {
-            var msgRead = $('<div class="msgRead" id="p' + obj['id'] + '"></div>');
-            if(obj['isRead'] == 1){
-                msgRead.append($('<span class="msgReadSign"></span>'));
-            }
-            msgRead.append($('<span class="am-badge msgType">点赞</span>'));
-            msgRead.append($('<span class="msgHead"><a class="msgPerson">' + obj['praisePeople'] + '</a>点赞了你的博文</span>'));
-            msgRead.append($('<div class="msgTxt">' +
-                '<span><a class="articleTitle" href="/article/' + obj['articleId'] + '" target="_blank">' + obj['articleTitle'] + '</a></span>' +
-                '<span class="msgDate">' + obj['likeDate'] + '</span>' +
-                '</div>' +
-                '<hr>'));
-            msgContent.append(msgRead);
-        });
-        msgContent.append($('<div class="my-row" id="thumbsUpPage">' +
-            '<div class="thumbsUpPagination">' +
-            '</div>' +
-            '</div>'))
-    }
-
-    //已读一条消息
-    $('.articleTitle').click(function () {
-        var parent = $(this).parent().parent().parent();
-        var isRead = true;
-        var num = $('.msgIsReadNum').html();
-        if(parent.find($('.msgReadSign')).length != 0){
-            isRead = false;
-        }
-        if(isRead == false){
-            var id = parent.attr('id').substring(1);
-            $.ajax({
-                type:'get',
-                url:'/readThisThumbsUp',
-                dataType:'json',
-                data:{
-                    id:id,
-                },
-                success:function (data) {
-                },
-                error:function () {
-                }
-            })
-            //去掉未读红点
-            parent.find($('.msgReadSign')).removeClass('msgReadSign');
-            //未读消息减1
-            $('.msgIsReadNum').html(--num);
-
-            // 去掉左侧栏未读消息
-            if(num == 0){
-                $('.articleThumbsUpNum').remove();
-            } else {
-                $('.articleThumbsUpNum').html(num);
-            }
-        }
-    })
-
-    //全部标记为已读
-    $('.msgIsRead').click(function () {
-        var num = $('.msgIsReadNum').html();
-        if(num != 0){
-            $.ajax({
-                type:'get',
-                url:'/readAllThumbsUp',
-                dataType:'json',
-                data:{
-                },
-                success:function (data) {
-                    if(data['status'] == 101){
-                        $.get("/toLogin",function(data,status,xhr){
-                            window.location.replace("/login");
-                        });
-                    } else if(data['status'] == 103){
-                        dangerNotice(data['message'] + " 已读失败")
-                    } else{
-                        $('.msgIsReadNum').html(0);
-                        $('.msgContent').find($('.msgReadSign')).removeClass('msgReadSign');
-
-                        $('.articleThumbsUpNum').remove();
-                    }
-                },
-                error:function () {
-                }
-            })
-        }
-
-    })
-}
-
-//删除文章
+//删除博客
 $('.sureArticleDeleteBtn').click(function () {
     $.ajax({
         type:'get',
@@ -207,11 +106,11 @@ $('.sureArticleDeleteBtn').click(function () {
         },
         success:function (data) {
             if(data['status'] == 201){
-                dangerNotice("删除文章失败")
+                dangerNotice("删除博客失败")
             } else if(data['status'] == 103){
-                dangerNotice(data['message'] + " 删除文章失败")
+                dangerNotice(data['message'] + " 删除博客失败")
             } else {
-                successNotice("删除文章成功");
+                successNotice("删除博客成功");
                 getArticleManagement(1);
             }
         },
@@ -281,7 +180,7 @@ function getStatisticsInfo() {
         }
     });
 }
-//获得文章管理文章
+//获得博客管理博客
 function getArticleManagement(currentPage) {
     $.ajax({
         type:'post',
@@ -293,7 +192,7 @@ function getArticleManagement(currentPage) {
         },
         success:function (data) {
             if(data['status'] == 103){
-                dangerNotice(data['message'] + " 获取文章失败")
+                dangerNotice(data['message'] + " 获取博客失败")
             } else {
                 putInArticleManagement(data['data']);
                 scrollTo(0,0);//回到顶部
@@ -311,49 +210,11 @@ function getArticleManagement(currentPage) {
             }
         },
         error:function () {
-            alert("获取文章信息失败");
+            alert("获取博客信息失败");
         }
     });
 }
-//获得文章点赞信息
-function getArticleThumbsUp(currentPage) {
-    $.ajax({
-        type:'post',
-        url:'/getArticleThumbsUp',
-        dataType:'json',
-        data:{
-            rows:10,
-            pageNum:currentPage
-        },
-        success:function (data) {
-            if(data['status'] == 101){
-                $.get("/toLogin",function(data,status,xhr){
-                    window.location.replace("/login");
-                });
-            } else if(data['status'] == 103){
-                dangerNotice(data['message'] + " 获得点赞失败")
-            } else {
-                putInArticleThumbsUp(data['data']);
-                scrollTo(0,0);//回到顶部
-
-                //分页
-                $(".thumbsUpPagination").paging({
-                    rows:data['data']['pageInfo']['pageSize'],//每页显示条数
-                    pageNum:data['data']['pageInfo']['pageNum'],//当前所在页码
-                    pages:data['data']['pageInfo']['pages'],//总页数
-                    total:data['data']['pageInfo']['total'],//总记录数
-                    callback:function(currentPage){
-                        getArticleThumbsUp(currentPage);
-                    }
-                });
-            }
-        },
-        error:function () {
-            alert("获取文章点赞信息失败");
-        }
-    });
-}
-//获得文章分类信息
+//获得博客分类信息
 function getArticleCategories() {
     $.ajax({
         type:'get',
@@ -462,13 +323,9 @@ function updateCategory(categoryName, type) {
 $('.superAdminList .userFeedback').click(function () {
     getAllFeedback(1);
 });
-//点击文章管理
+//点击博客管理
 $('.superAdminList .articleManagement').click(function () {
     getArticleManagement(1);
-});
-//点击点赞管理
-$('.superAdminList .articleThumbsUp').click(function () {
-    getArticleThumbsUp(1);
 });
 //点击分类管理
 $('.superAdminList .articleCategories').click(function () {

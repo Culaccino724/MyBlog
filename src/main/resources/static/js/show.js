@@ -542,7 +542,7 @@
         });
     })(jQuery);
 
-    //点赞喜欢效果
+    //收藏效果
     function niceIn(prop) {
         prop.find('i').addClass('niceIn');
         setTimeout(function () {
@@ -551,7 +551,7 @@
     }
 
 
-    //喜欢按钮
+    //收藏按钮
     $(".likeBtn").click(function () {
         var $this = $(this);
         $.ajax({
@@ -583,13 +583,13 @@
                     $('.likeHeart').find('i').addClass("am-icon-heart");
                     $.tipsBox({
                         obj: $this,
-                        str: "+1个喜欢"
+                        str: "收藏+1"
                     });
                     niceIn($this);
                 }
             },
             error:function () {
-                alert("点赞失败！")
+                alert("收藏失败！")
             }
         });
     });

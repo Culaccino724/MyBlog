@@ -113,7 +113,7 @@
         position: relative;
     }
 }
-#leaveWord,#commentMessage,#articleManagement{
+#leaveWord,#commentMessage,#articleManagement,#articleThumbsUp{
     display: none;
     margin-bottom: 150px;
 }
@@ -341,4 +341,15 @@
 }
 .articleManagementBtn{
     margin-right: 10px;
+}
+/*收藏管理*/
+.thumbsUpManagement{
+    margin-top: 30px;
+    padding-left: 1.5rem;
+}
+.thumbsUpManagement hr{
+    margin-top: 15px;
+}
+.msgHref{
+    margin-left: 5px;
 }
