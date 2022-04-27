@@ -108,7 +108,7 @@
                         <button class="personalSpace am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle><span sec:authentication="name"></span> <span class="am-icon-caret-down"></span></button>
                         <ul class="am-dropdown-content">
                             <li><a href="/user" sec:authorize="hasRole('ROLE_USER')">个人主页</a></li>
-                            <li><a href="/superadmin" sec:authorize="hasRole('ROLE_SUPERADMIN')">网站后台管理</a></li>
+                            <li><a href="/superadmin" sec:authorize="hasRole('ROLE_SUPERADMIN')">后台管理</a></li>
                             <li><a href="/user" class="news">消息<span class="newsNum am-badge am-badge-danger"></span></a></li>
                             <li><a class="feedbackClick">反馈</a></li>
                             <hr style="margin: 10px 0 5px 0;">
