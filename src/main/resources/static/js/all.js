@@ -174,6 +174,28 @@ $.ajax({
     }
 });
 
+//获得登录用户收藏未读消息
+$.ajax({
+    type:'post',
+    url:'/getUserCollectNews',
+    dataType:'json',
+    data:{
+    },
+    success:function (data) {
+        var thisPageName = window.location.pathname + window.location.search;
+        if(data['status'] == 103){
+            return;
+        }
+        if(data['status'] != 101 && data['data']['msgIsNotReadNum'] != 0){
+            if(thisPageName === "/user"){
+                $('.articleThumbsUp').find('a').append($('<span class="msgIsNotReadNum am-margin-right am-fr am-badge am-badge-danger am-round">' + data['data']['msgIsNotReadNum'] + '</span>'));
+            }
+        }
+    },
+    error:function () {
+    }
+});
+
 //反馈
 $('.feedbackClick').click(function () {
     $('.feedback').css("display","block")

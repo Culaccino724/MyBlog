@@ -125,52 +125,6 @@ public class SuperAdminControl {
     }
 
     /**
-     * 获得文章点赞信息
-     */
-    @PostMapping(value = "/getArticleThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String getArticleThumbsUp(@RequestParam("rows") int rows,
-                                         @RequestParam("pageNum") int pageNum){
-        try {
-            DataMap data = articleLikesRecordService.getArticleThumbsUp(rows, pageNum);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Get article thumbsUp exception", e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 已读一条点赞信息
-     */
-    @GetMapping(value = "/readThisThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String readThisThumbsUp(@RequestParam("id") int id){
-        try {
-            DataMap data = articleLikesRecordService.readThisThumbsUp(id);
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Read one thumbsUp [{}] exception", id, e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
-     * 已读所有点赞信息
-     */
-    @GetMapping(value = "/readAllThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @PermissionCheck(value = "ROLE_SUPERADMIN")
-    public String readAllThumbsUp(){
-        try {
-            DataMap data = articleLikesRecordService.readAllThumbsUp();
-            return JsonResult.build(data).toJSON();
-        } catch (Exception e){
-            log.error("Read all thumbsUp exception", e);
-        }
-        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
-    }
-
-    /**
      * 获得所有分类
      */
     @GetMapping(value = "/getArticleCategories", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

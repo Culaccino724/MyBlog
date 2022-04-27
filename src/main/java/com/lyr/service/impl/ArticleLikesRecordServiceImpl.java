@@ -54,11 +54,11 @@ public class ArticleLikesRecordServiceImpl implements ArticleLikesRecordService 
     }
 
     @Override
-    public DataMap getArticleThumbsUp(int rows, int pageNum) {
+    public DataMap getArticleThumbsUpByUsername(String username, int rows, int pageNum) {
         JSONObject returnJson = new JSONObject();
 
         PageHelper.startPage(pageNum, rows);
-        List<ArticleLikesRecord> likesRecords = articleLikesMapper.getArticleThumbsUp();
+        List<ArticleLikesRecord> likesRecords = articleLikesMapper.getArticleThumbsUpByUsername(username);
         PageInfo<ArticleLikesRecord> pageInfo = new PageInfo<>(likesRecords);
         JSONArray returnJsonArray = new JSONArray();
         JSONObject articleLikesJson;
@@ -73,7 +73,7 @@ public class ArticleLikesRecordServiceImpl implements ArticleLikesRecordService 
             returnJsonArray.add(articleLikesJson);
         }
         returnJson.put("result", returnJsonArray);
-        returnJson.put("msgIsNotReadNum",articleLikesMapper.countIsReadNum());
+        returnJson.put("msgIsNotReadNum",articleLikesMapper.countIsReadNumByUsername(username));
 
         JSONObject pageJson = new JSONObject();
         pageJson.put("pageNum",pageInfo.getPageNum());
@@ -84,6 +84,13 @@ public class ArticleLikesRecordServiceImpl implements ArticleLikesRecordService 
         pageJson.put("isLastPage",pageInfo.isIsLastPage());
         returnJson.put("pageInfo",pageJson);
 
+        return DataMap.success().setData(returnJson);
+    }
+
+    @Override
+    public DataMap getArticleThumbsUpNumByUsername(String username) {
+        JSONObject returnJson = new JSONObject();
+        returnJson.put("msgIsNotReadNum",articleLikesMapper.countIsReadNumByUsername(username));
         return DataMap.success().setData(returnJson);
     }
 

@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
-import java.io.File;
 import java.security.Principal;
 
 /**
@@ -37,6 +34,8 @@ public class UserControl {
     RedisService redisService;
     @Autowired
     ArticleService articleService;
+    @Autowired
+    ArticleLikesRecordService articleLikesRecordService;
 
     /**
      * 获得个人资料
@@ -209,4 +208,68 @@ public class UserControl {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
+    /**
+     * 获得用户收藏未读消息
+     */
+    @PostMapping(value = "/getUserCollectNews", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String getUserCollectNews(@AuthenticationPrincipal Principal principal){
+        String username = principal.getName();
+        try {
+            DataMap data = articleLikesRecordService.getArticleThumbsUpNumByUsername(username);
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Get article thumbsUp num exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+    /**
+     * 获得文章收藏信息
+     */
+    @PostMapping(value = "/getArticleThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String getArticleThumbsUp(@RequestParam("rows") int rows,
+                                     @RequestParam("pageNum") int pageNum,
+                                     @AuthenticationPrincipal Principal principal){
+        String username = principal.getName();
+        try {
+            DataMap data = articleLikesRecordService.getArticleThumbsUpByUsername(username, rows, pageNum);
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Get article thumbsUp exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+    /**
+     * 已读一条收藏信息
+     */
+    @GetMapping(value = "/readThisThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String readThisThumbsUp(@RequestParam("id") int id){
+        try {
+            DataMap data = articleLikesRecordService.readThisThumbsUp(id);
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Read one thumbsUp [{}] exception", id, e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+    /**
+     * 已读所有收藏信息
+     */
+    @GetMapping(value = "/readAllThumbsUp", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String readAllThumbsUp(){
+        try {
+            DataMap data = articleLikesRecordService.readAllThumbsUp();
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Read all thumbsUp exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+    
 }

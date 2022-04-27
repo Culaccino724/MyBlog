@@ -33,11 +33,17 @@ public interface ArticleLikesRecordService {
     /**
      * 获得文章点赞信息
      */
-    DataMap getArticleThumbsUp(int rows, int pageNum);
+    DataMap getArticleThumbsUpByUsername(String username, int rows, int pageNum);
 
     /**
-     * 已读一条点赞记录
+     * 统计文章点赞信息
+     * @param username 用户名
      */
+    DataMap getArticleThumbsUpNumByUsername(String username);
+
+        /**
+         * 已读一条点赞记录
+         */
     DataMap readThisThumbsUp(int id);
 
     /**
