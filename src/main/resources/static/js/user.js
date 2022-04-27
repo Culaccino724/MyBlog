@@ -437,14 +437,14 @@ function putInLeaveWordInfo(data) {
 
     })
 }
-//填充文章管理
+//填充博客管理
 function putInArticleManagement(data) {
     var articleManagementTable = $('.articleManagementTable');
     articleManagementTable.empty();
     var table = $('<table class="table am-table am-table-bd am-table-striped admin-content-table  am-animation-slide-right"></table>');
     table.append($('<thead>' +
         '<tr>' +
-        '<th>文章标题</th><th>发布时间</th><th>文章分类</th><th>浏览量</th><th>操作</th>' +
+        '<th>博客标题</th><th>发布时间</th><th>博客分类</th><th>浏览量</th><th>操作</th>' +
         '</tr>' +
         '</thead>'));
     var tables = $('<tbody class="tables"></tbody>');
@@ -554,7 +554,7 @@ function getUserLeaveWord(currentPage) {
         }
     })
 }
-//获得文章管理文章
+//获得博客管理博客
 function getArticleManagement(currentPage) {
     $.ajax({
         type:'post',
@@ -566,7 +566,7 @@ function getArticleManagement(currentPage) {
         },
         success:function (data) {
             if(data['status'] == 103){
-                dangerNotice(data['message'] + " 获取文章失败")
+                dangerNotice(data['message'] + " 获取博客失败")
             } else {
                 putInArticleManagement(data['data']);
                 scrollTo(0,0);//回到顶部
@@ -584,11 +584,11 @@ function getArticleManagement(currentPage) {
             }
         },
         error:function () {
-            alert("获取文章信息失败");
+            alert("获取博客信息失败");
         }
     });
 }
-//删除文章
+//删除博客
 $('.sureArticleDeleteBtn').click(function () {
     $.ajax({
         type:'get',
@@ -599,11 +599,11 @@ $('.sureArticleDeleteBtn').click(function () {
         },
         success:function (data) {
             if(data['status'] == 201){
-                dangerNotice("删除文章失败")
+                dangerNotice("删除博客失败")
             } else if(data['status'] == 103){
-                dangerNotice(data['message'] + " 删除文章失败")
+                dangerNotice(data['message'] + " 删除博客失败")
             } else {
-                successNotice("删除文章成功");
+                successNotice("删除博客成功");
                 getArticleManagement(1);
             }
         },
@@ -621,7 +621,7 @@ $('.commentMessage').click(function () {
 $('.leaveWord').click(function () {
     getUserLeaveWord(1);
 });
-//点击文章管理
+//点击博客管理
 $('.articleManagement').click(function () {
     getArticleManagement(1);
 });
