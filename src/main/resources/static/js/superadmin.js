@@ -200,7 +200,7 @@ function putInArticleThumbsUp(data) {
 $('.sureArticleDeleteBtn').click(function () {
     $.ajax({
         type:'get',
-        url:'/deleteArticle',
+        url:'/deleteArticleBySuperadmin',
         dataType:'json',
         data:{
             id:deleteArticleId
@@ -285,7 +285,7 @@ function getStatisticsInfo() {
 function getArticleManagement(currentPage) {
     $.ajax({
         type:'post',
-        url:'/getArticleManagement',
+        url:'/getArticleManagementBySuperadmin',
         dataType:'json',
         data:{
             rows:10,

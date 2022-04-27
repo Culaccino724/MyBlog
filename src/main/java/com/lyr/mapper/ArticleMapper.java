@@ -87,4 +87,7 @@ public interface ArticleMapper {
 
     @Delete("delete from article where articleId=#{articleId}")
     void deleteByArticleId(long articleId);
+
+    @Select("select id,articleId,originalAuthor,articleTitle,articleCategories,publishDate from article where originalAuthor=#{username} order by id desc")
+    List<Article> getArticleManagementByUsername(@Param("username") String username);
 }

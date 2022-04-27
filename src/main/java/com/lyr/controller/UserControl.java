@@ -4,10 +4,7 @@ import com.lyr.aspect.annotation.PermissionCheck;
 import com.lyr.constant.CodeType;
 import com.lyr.model.User;
 import com.lyr.service.*;
-import com.lyr.utils.DataMap;
-import com.lyr.utils.FileUtil;
-import com.lyr.utils.JsonResult;
-import com.lyr.utils.TimeUtil;
+import com.lyr.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -38,6 +35,8 @@ public class UserControl {
     LeaveMessageService leaveMessageService;
     @Autowired
     RedisService redisService;
+    @Autowired
+    ArticleService articleService;
 
     /**
      * 获得个人资料
@@ -168,6 +167,44 @@ public class UserControl {
             return JsonResult.build(data).toJSON();
         } catch (Exception e){
             log.error("[{}] get user news exception", username, e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+    /**
+     * 获得文章管理
+     * @return
+     */
+    @PostMapping(value = "/getArticleManagementByUser", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String getArticleManagement(@RequestParam("rows") int rows,
+                                       @RequestParam("pageNum") int pageNum,
+                                       @AuthenticationPrincipal Principal principal){
+        String username = principal.getName();
+        try {
+            DataMap data = articleService.getArticleManagementByUsername(username, rows, pageNum);
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Get article management exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+    /**
+     * 删除文章
+     * @param id 文章id
+     */
+    @GetMapping(value = "/deleteArticleByUser", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PermissionCheck(value = "ROLE_USER")
+    public String deleteArticle(@RequestParam("id") String id){
+        try {
+            if(StringUtil.BLANK.equals(id) || id == null){
+                return JsonResult.build(DataMap.fail(CodeType.DELETE_ARTICLE_FAIL)).toJSON();
+            }
+            DataMap data = articleService.deleteArticle(Long.parseLong(id));
+            return JsonResult.build(data).toJSON();
+        } catch (Exception e){
+            log.error("Delete article [{}] exception", id, e);
         }
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }

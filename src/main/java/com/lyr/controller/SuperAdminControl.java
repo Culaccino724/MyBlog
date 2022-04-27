@@ -92,7 +92,7 @@ public class SuperAdminControl {
      * 获得文章管理
      * @return
      */
-    @PostMapping(value = "/getArticleManagement", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/getArticleManagementBySuperadmin", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @PermissionCheck(value = "ROLE_SUPERADMIN")
     public String getArticleManagement(@RequestParam("rows") int rows,
                                            @RequestParam("pageNum") int pageNum){
@@ -109,7 +109,7 @@ public class SuperAdminControl {
      * 删除文章
      * @param id 文章id
      */
-    @GetMapping(value = "/deleteArticle", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/deleteArticleBySuperadmin", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @PermissionCheck(value = "ROLE_SUPERADMIN")
     public String deleteArticle(@RequestParam("id") String id){
         try {

@@ -133,4 +133,9 @@ public interface ArticleService {
     @Transactional
     DataMap deleteArticle(long id);
 
+    /**
+     * 通过用户名分页获得文章管理
+     */
+    DataMap getArticleManagementByUsername(String username, int rows, int pageNum);
+
 }

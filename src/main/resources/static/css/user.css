@@ -113,7 +113,7 @@
         position: relative;
     }
 }
-#leaveWord,#commentMessage{
+#leaveWord,#commentMessage,#articleManagement{
     display: none;
     margin-bottom: 150px;
 }
@@ -327,4 +327,18 @@
 }
 .msgHref{
     margin-left: 5px;
+}
+/*文章管理*/
+.articles{
+    margin-top: 30px;
+}
+.articles td,th{
+    border: 1px solid #eceff2;
+}
+.articles table{
+    border-collapse: collapse;
+    border: 1px solid #eceff2;
+}
+.articleManagementBtn{
+    margin-right: 10px;
 }
